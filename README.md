@@ -4,7 +4,7 @@ This repository contains three main components:
 2. Construct score-based diffusion and SDE from the ground up.
 3. Develop stable diffusion from scratch.
 
-The content is largely inspired by [Yangsong's work](https://yang-song.net/blog/), [Binxu Bai's blog](https://animadversio.github.io/blog/), Guanbin Huang's notes on the mathematical derivation in diffusion generously, and coding support from Shouxieai. I'm deeply grateful for their contributions.
+The content is largely inspired by [Yangsong's work](https://yang-song.net/blog/), [Binxu Bai's blog](https://animadversio.github.io/blog/), Guanbin Huang's notes on the mathematical derivation and the codebase in diffusion generously, and coding support from Shouxieai. I'm deeply grateful for their contributions.
 
 Feedback, feature requests, and issues are always welcome.
 
