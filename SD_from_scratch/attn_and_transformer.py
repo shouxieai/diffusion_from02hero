@@ -69,7 +69,6 @@ class TransformerBlock(nn.Module):
     x = self.ffn(self.norm3(x)) + x   # ([1, 4, 64])
     
     return x
-  
 
 class SpatialTransformer(nn.Module):
   def __init__(self, hidden_dim, context_dim):

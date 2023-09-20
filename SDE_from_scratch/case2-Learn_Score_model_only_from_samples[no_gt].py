@@ -154,8 +154,8 @@ class ScoreModel_Time(nn.Module):
     return pred   # the shape of marginal_prob_std_f(t) is (batch_size, )
 
 def reverse_diffusion_time_dep(score_model_td, sampN=500, sigma=5, nsteps=200, ndim=2, exact=False):
-  lambdaT = (sigma**2 - 1) / (2 * np.log(sigma))
-  xT = np.sqrt(lambdaT) * np.random.randn(sampN, ndim)
+  betaT = (sigma**2 - 1) / (2 * np.log(sigma))
+  xT = np.sqrt(betaT) * np.random.randn(sampN, ndim)
   x_traj_rev = np.zeros((*xT.shape, nsteps, ))
   x_traj_rev[:,:,0] = xT
   dt = 1 / nsteps
@@ -247,7 +247,6 @@ for ep in pbar:
   pbar.set_description(f"step {ep} loss {loss.item():.3f}")
   if ep == 0:
     print(f"step {ep} loss {loss.item():.3f}")
-
 
 sampN = 1000
 x_traj_rev_appr_denois = reverse_diffusion_time_dep(score_model_td, sampN=sampN,
